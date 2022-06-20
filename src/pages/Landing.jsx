@@ -1,26 +1,26 @@
 import logo from '../assets/images/job-search.png';
 import main from '../assets/images/main.svg';
+import { Logo } from '../components';
+import { LandingPageWrapper } from '../assets/wrappers';
 
 const Landing = () => {
   return (
-    <main>
+    <LandingPageWrapper>
       <nav>
-        <img src={logo} alt='jobster logo' className='logo' />
+        <Logo css={'logo'} link={logo} desc={'job-search logo'} />
       </nav>
       <div className='container page'>
         {/* info */}
         <div className='info'>
           <h1>
-            job <span>Hunter</span> 
+            job <span>Hunter</span>
           </h1>
-          <p>
-            Are you tired of your current job? Not to worry, JOB Hunter is here for you!.
-          </p>
+          <p>Are you tired of your current job? Not to worry, JOB Hunter is here for you!.</p>
           <button className='btn btn-hero'>Login/Register</button>
         </div>
-        <img src={main} alt='job hunt' className='img main-img' />
+        <Logo css={'img main-img'} link={main} desc={'job hunt'} />
       </div>
-    </main>
+    </LandingPageWrapper>
   );
 };
 export default Landing;
