@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Logo, FormRow } from '../components';
-import RegistrationPageWrapper from '../assets/wrappers';
+import Wrapper from '../assets/wrappers/RegisterPage';
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, registerUser } from '../features/user/userSlice';
@@ -50,7 +50,7 @@ function Register() {
     }
   }, [user]);
   return (
-    <RegistrationPageWrapper className='full-page'>
+    <Wrapper className='full-page'>
       <form className='form' onSubmit={onSubmit}>
         <Logo />
         <h3>{values.isMember ? 'Login' : 'Register'}</h3>
@@ -99,7 +99,7 @@ function Register() {
           </button>
         </p>
       </form>
-    </RegistrationPageWrapper>
+    </Wrapper>
   );
 }
 export default Register;

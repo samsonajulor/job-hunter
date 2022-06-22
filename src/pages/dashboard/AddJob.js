@@ -1,5 +1,5 @@
 import { FormRow, FormRowSelect } from '../../components';
-import DashboardWrapper from '../../assets/wrappers';
+import Wrapper from '../../assets/wrappers/DashboardFormPage';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import {
@@ -61,7 +61,7 @@ const AddJob = () => {
   }, []);
 
   return (
-    <DashboardWrapper>
+    <Wrapper>
       <form className='form'>
         <h3>{isEditing ? 'edit job' : 'add job'}</h3>
         <div className='form-center'>
@@ -121,7 +121,7 @@ const AddJob = () => {
           </div>
         </div>
       </form>
-    </DashboardWrapper>
+    </Wrapper>
   );
 };
 export default AddJob;

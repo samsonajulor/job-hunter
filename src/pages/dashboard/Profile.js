@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FormRow } from '../../components';
-import DashboardWrapper from '../../assets/wrappers';
+import Wrapper from '../../assets/wrappers/DashboardFormPage';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { updateUser } from '../../features/user/userSlice';
@@ -32,7 +32,7 @@ const Profile = () => {
   };
 
   return (
-    <DashboardWrapper>
+    <Wrapper>
       <form className='form' onSubmit={handleSubmit}>
         <h3>profile</h3>
         <div className='form-center'>
@@ -66,7 +66,7 @@ const Profile = () => {
           </button>
         </div>
       </form>
-    </DashboardWrapper>
+    </Wrapper>
   );
 };
 export default Profile;
